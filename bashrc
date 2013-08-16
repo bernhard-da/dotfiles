@@ -21,4 +21,4 @@ alias blog='ssh root@beim-entschleunigen.net -p 2105'
 alias ll='ls -lah'
 alias vpn='sudo openvpn /home/bernhard/vpn/bernhard.ovpn'
 alias gem='cd /home/gemeinsam/Dropbox/Auszeit'
-
+alias rscripts='cd /home/gemeinsam/Dropbox/Auszeit/RScripts'
