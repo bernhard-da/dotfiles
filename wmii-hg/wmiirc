@@ -16,11 +16,12 @@ noticebar=/rbar/!notice
 
 # Colors tuples: "<text> <background> <border>"
 export WMII_NORMCOLORS='#000000 #ffffff #000000'
-export WMII_FOCUSCOLORS='#000000 #cccccc #000000'
+export WMII_FOCUSCOLORS='#000000 #aaaaaa #000000'
 export WMII_BACKGROUND='#cccccc'
 
 #export WMII_FONT='-*-fixed-medium-r-*-*-13-*-*-*-*-*-*-*'
 export WMII_FONT='xft:envy code r:medium:pixelsize=14'
+#export WMII_FONT='xft:Terminus:bold:autohint=true:antialias=true:pixelsize=18'
 #export WMII_FONT='-*-terminusmod.icons-medium-r-*-*-12-*-*-*-*-*-*-*'
 set -- $(echo $WMII_NORMCOLORS $WMII_FOCUSCOLORS)
 export WMII_TERM="xterm"
