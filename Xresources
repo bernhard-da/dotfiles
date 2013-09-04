@@ -1,6 +1,6 @@
 xterm*geometry:           80x25
-xterm*faceName:           terminusbold:pixelsize=16
-!xterm*font:             -*-dina-medium-r-*-*-16-*-*-*-*-*-*-*
+!xterm*faceName:           xft:Terminus:bold:pixelsize=18
+xterm*faceName:           xft:envy code r:medium:pixelsize=16
 xterm*dynamicColors:      true
 xterm*utf8:               2
 xterm*eightBitInput:      true
@@ -14,29 +14,22 @@ xterm*jumpScroll:         true
 xterm*multiScroll:        true
 xterm*toolBar:            false
 
-background:       #170F0D
-foreground:       #746C48
+xterm*foreground: #FFFFFF
+xterm*background: #111111
+xterm*color0:  #444444
+xterm*color8:  #444444
+xterm*color1:  #E02D2D
+xterm*color9:  #E02D2D
+xterm*color2:  #7CD723
+xterm*color10: #7CD723
+xterm*color3:  #F7D325
+xterm*color11: #F7D325
+xterm*color4:  #46AEDE
+xterm*color12: #46AEDE
+xterm*color5:  #E32C57
+xterm*color13: #E32C57
+xterm*color6:  #D6DBAC
+xterm*color14: #D6DBAC
+xterm*color7:  #FFFFFF
+xterm*color15: #FFFFFF
 
-color0:           #392925
-color8:           #544B2E
-
-color1:           #98724C
-color9:           #AF652F
-
-color2:           #908F32
-color10:          #C3C13D
-
-color3:           #AA964C
-color11:          #C8B55B
-
-color4:           #7B854E
-color12:          #70A16C
-
-color5:           #6B5644
-color13:          #98724C
-
-color6:           #5C5142
-color14:          #778725
-
-color7:           #C8B55B
-color15:          #E4DC8C
