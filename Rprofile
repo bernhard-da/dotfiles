@@ -1,6 +1,15 @@
 cat("Rprofile: --> loading devtools-package()\n")
 library(devtools)
 
+devel.on <- function() {
+  dev_mode(TRUE, path="~/development/R")
+}
+
+devel.off <- function() {
+  dev_mode(FALSE)
+}
+
+
 #cat("Rprofile: --> setting AT repository\n")
 #r = getOption("repos") # hard code the AT repo for CRAN
 #r["CRAN"] = "http://cran.at.r-project.org"
