@@ -16,3 +16,5 @@ set expandtab
 "set shiftwidth=3
 "set tabstop=3
 
+set foldmethod=syntax
+set foldnestmax=5
