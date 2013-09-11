@@ -5,7 +5,7 @@
 
 ########## Variables
 
-dir=~/dotfiles                	# dotfiles directory
+dir=~/development/dotfiles                	# dotfiles directory
 olddir=~/.dotfiles_old         	# old dotfiles backup directory
 files="Xresources bashrc vimrc wmii-hg Rprofile"   # list of files/folders to symlink in homedir
 
