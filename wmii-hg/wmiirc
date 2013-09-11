@@ -123,7 +123,7 @@ done &
 echo '$white $blue $black' bc | wmiir create /rbar/w_bc
 bc() {
   wmiir xwrite /rbar/w_bc colors "$white $green $black"
-  echo -n label "BC:" `/home/bernhard/Scripts/bc.r`" Euro"
+  echo -n label "BC:" `/home/bernhard/skripts/bc.r`" Euro"
 }
 while bc | wmiir write /rbar/w_bc; do
    sleep 60
