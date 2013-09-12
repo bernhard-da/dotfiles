@@ -18,3 +18,4 @@ set expandtab
 
 set foldmethod=syntax
 set foldnestmax=5
+set foldlevelstart=20
