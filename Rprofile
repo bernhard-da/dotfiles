@@ -1,4 +1,4 @@
-cat("Rprofile: --> loading devtools-package()\n")
+#cat("Rprofile: --> loading devtools-package()\n")
 #library(devtools)
 
 devel.on <- function() {
