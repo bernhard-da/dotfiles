@@ -77,21 +77,26 @@ done &
 ### Battery Widget ###
 echo '$white $blue $black' bat | wmiir create /rbar/wbat
 bat() {
-	# maximaler Füllstand
-	BAT_MAX=`cat /sys/class/power_supply/BAT1/energy_full`
-	STATUS=`cat /sys/class/power_supply/BAT1/status`
+  # maximaler Füllstand
+  #BAT_MAX=`cat /sys/class/power_supply/BAT1/energy_full`
+  #STATUS=`cat /sys/class/power_supply/BAT1/status`
 
-	# aktuellen Wert einlesen
-	BAT_NOW=`cat /sys/class/power_supply/BAT1/energy_now`
-	PERCENT=`gawk " BEGIN {OFMT=\"%.0f\";print (100/$BAT_MAX) * $BAT_NOW}"`
-   if [ $PERCENT -ge "10" ]
-   then
-      wmiir xwrite /rbar/wbat colors "$white $orange $black"
-      echo -n label "Battery: "$STATUS at $PERCENT%
-   else
-      wmiir xwrite /rbar/wbat colors "$white $red $black"
-      echo -n label "Battery: "$STATUS at $PERCENT%
-   fi
+  # aktuellen Wert einlesen
+  #BAT_NOW=`cat /sys/class/power_supply/BAT1/energy_now`
+  #PERCENT=`gawk " BEGIN {OFMT=\"%.0f\";print (100/$BAT_MAX) * $BAT_NOW}"`
+  STATUS=`acpitool -b | awk '{print $4}'`
+  PERCENT=`acpitool -b | awk '{print $5}'`
+  #STATUS=${STATUS%?}
+  STATUS=${STATUS:0:-1}
+  PERCENT=${PERCENT:0:-4}
+  if [ $PERCENT -ge "10" ]
+  then
+    wmiir xwrite /rbar/wbat colors "$white $orange $black"
+    echo -n label "Battery: "$STATUS at $PERCENT%
+  else
+    wmiir xwrite /rbar/wbat colors "$white $red $black"
+    echo -n label "Battery: "$STATUS at $PERCENT%
+  fi
 }
 while bat | wmiir write /rbar/wbat; do
    sleep 30
@@ -100,7 +105,7 @@ done &
 ### Root-Space Widget ###
 echo '$white $blue $black' space_root | wmiir create /rbar/wspace_root
 space_root() {
-	FREEROOT=`df -H | grep -E 'lvm-root' | awk '{ print $4 }' | cut -d'G' -f1 | awk -F '.' '{ print $1 }'`
+	FREEROOT=`df -H | grep -E 'vgroup-root' | awk '{ print $4 }' | cut -d'G' -f1 | awk -F '.' '{ print $1 }'`
    wmiir xwrite /rbar/wspace_root colors "$white $green $black"
    echo -n label "/:" $FREEROOT"G free"
 }
@@ -111,7 +116,7 @@ done &
 ### Home-Space Widget ###
 echo '$white $blue $black' space_home | wmiir create /rbar/wspace_home
 space_home() {
-	FREEHOME=`df -H | grep -E 'lvm-home' | awk '{ print $4 }' | cut -d'G' -f1 | awk -F '.' '{ print $1 }'`
+	FREEHOME=`df -H | grep -E 'vgroup-home' | awk '{ print $4 }' | cut -d'G' -f1 | awk -F '.' '{ print $1 }'`
    wmiir xwrite /rbar/wspace_home colors "$black $grey $black"
    echo -n label "/home:" $FREEHOME"G free"
 }
