@@ -19,7 +19,9 @@ alias search='packer -Ss'
 alias blog='ssh root@beim-entschleunigen.net -p 2105'
 
 alias ll='ls -lah'
-alias vpn='sudo openvpn /home/bernhard/vpn/bernhard.ovpn'
+alias vpn='sudo openvpn /home/bernhard/skripts/vpn/bernhard.ovpn'
 alias gem='cd /home/gemeinsam/Dropbox/Auszeit'
 alias rscripts='cd /home/gemeinsam/Dropbox/Auszeit/RScripts'
 alias bc='/home/bernhard/Scripts/bc.r'
+
+alias gn='sudo systemctl poweroff'
