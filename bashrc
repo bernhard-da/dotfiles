@@ -6,6 +6,11 @@ source /usr/share/git/completion/git-prompt.sh
 GIT_PS1_SHOWSTASHSTATE=true
 GIT_PS1_SHOWDIRTYSTATE=true
 
+VISUAL="/usr/bin/vim"
+EDITOR="/usr/bin/vim"
+export VISUAL
+export EDITOR
+
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
