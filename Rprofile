@@ -1,8 +1,10 @@
 #cat("Rprofile: --> loading devtools-package()\n")
 #library(devtools)
 
+options(devtools.path="~/development/R-dev")
+
 devel.on <- function() {
-  dev_mode(TRUE, path="~/development/R")
+  dev_mode(TRUE)
 }
 
 devel.off <- function() {
@@ -11,10 +13,10 @@ devel.off <- function() {
 
 
 #cat("Rprofile: --> setting AT repository\n")
-#r = getOption("repos") # hard code the AT repo for CRAN
-#r["CRAN"] = "http://cran.at.r-project.org"
-#options(repos = r)
-#rm(r)
+r = getOption("repos") # hard code the AT repo for CRAN
+r["CRAN"] = "http://cran.at.r-project.org"
+options(repos = r)
+rm(r)
 
 #library(roxygen2)
 #setwd("/home/bernhard/Working/R")
