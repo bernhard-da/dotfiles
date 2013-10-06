@@ -14,6 +14,18 @@ export EDITOR
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+# save path on cd
+function cd {
+  builtin cd $@
+  pwd > ~/.last_dir
+}
+
+# restore last saved path
+if [ -f ~/.last_dir ]
+  then cd `cat ~/.last_dir`
+fi
+
+
 alias ls='ls --color=auto'
 #PS1='[\u@\h \W]\$ '
 PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
