@@ -1,7 +1,8 @@
 #cat("Rprofile: --> loading devtools-package()\n")
 #library(devtools)
-
 options(devtools.path="~/development/R-dev")
+.libPaths("~/development/R-dev")
+
 
 devel.on <- function() {
   dev_mode(TRUE)
