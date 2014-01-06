@@ -40,5 +40,5 @@ alias vpn='sudo openvpn /home/bernhard/skripts/vpn/bernhard.ovpn'
 alias gem='cd /home/gemeinsam/Dropbox/Auszeit'
 alias rscripts='cd /home/gemeinsam/Dropbox/Auszeit/RScripts'
 alias bc='/home/bernhard/Scripts/bc.r'
-
 alias gn='sudo systemctl poweroff'
+alias mountenc='encfs /media/nasn/backups_encrypted/home_bernhard_encrypted /media/nasn/backups_encrypted/home_bernhard'
