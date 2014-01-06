@@ -1,0 +1,122 @@
+[general]
+interval = 1
+loggingLevel = ERROR
+logFile = ~/.i3situation/log.txt
+colors = true
+
+[spacer]
+plugin= text
+color = #ffffff
+interval = 5000
+text=|
+
+[symbolbat]
+plugin= text
+color = #ffffff
+interval = 5000
+text=
+[bat]
+plugin= run
+interval = 60
+command = sh /home/bernhard/skripts/current_battery.sh
+color = #ffffff
+[spacer0]
+plugin= text
+color = #ffffff
+interval = 5000
+text=|
+
+[symboltemp]
+plugin= text
+color = #ffffff
+interval = 5000
+text=
+[temp]
+plugin= run
+interval = 60
+command = sh /home/bernhard/skripts/current_temperature.sh
+color = #ffffff
+[spacer1]
+plugin= text
+color = #ffffff
+interval = 5000
+text=|
+
+[symbolbitcoin]
+plugin= text
+color = #ffffff
+interval = 5000
+text=
+[bitcoin]
+plugin= run
+interval = 600
+command = Rscript /home/bernhard/skripts/bitcoin.r
+color = #ffffff
+
+[spacer2]
+plugin= text
+color = #ffffff
+interval = 5000
+text=|
+
+[symbolhome]
+plugin= text
+color = #ffffff
+interval = 5000
+text=
+[spacehome]
+plugin= run
+interval = 60
+command = sh /home/bernhard/skripts/current_freespace.sh home
+color = #ffffff
+
+[spacer3]
+plugin= text
+color = #ffffff
+interval = 5000
+text=|
+
+[symbolroot]
+plugin= text
+color = #ffffff
+interval = 5000
+text=
+[spaceroot]
+plugin= run
+interval = 60
+command = sh /home/bernhard/skripts/current_freespace.sh root
+color = #ffffff
+
+[spacer4]
+plugin= text
+color = #ffffff
+interval = 5000
+text=|
+
+[symbolcalendar]
+plugin= text
+color = #ffffff
+interval = 5000
+text=
+[calendar]
+plugin= dateTime
+interval = 300
+color = #ffffff
+longFormat=%%d/%%m/%%y (%%A)
+
+[symbolclock]
+plugin= text
+color = #ffffff
+interval = 5000
+text=
+[clock]
+plugin= dateTime
+interval = 60
+color = #ffffff
+longFormat=%%H:%%M
+
+[spacer5]
+plugin= text
+color = #ffffff
+interval = 5000
+text=|
