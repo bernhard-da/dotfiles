@@ -120,3 +120,21 @@ plugin= text
 color = #ffffff
 interval = 5000
 text=|
+
+[symbolmail]
+plugin= text
+color = #ffffff
+interval = 5000
+text=
+
+[gmail]
+plugin=run
+interval = 360
+command = sh /home/bernhard/skripts/check_gmail.sh
+color = #ffffff
+
+[spacer6]
+plugin= text
+color = #ffffff
+interval = 5000
+text=|
