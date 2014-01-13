@@ -18,7 +18,7 @@ text=
 [bat]
 plugin= run
 interval = 60
-command = sh /home/bernhard/skripts/current_battery.sh
+command = sh /home/bernhard/skripts/check_battery.sh
 color = #ffffff
 [spacer0]
 plugin= text
@@ -34,7 +34,7 @@ text=
 [temp]
 plugin= run
 interval = 60
-command = sh /home/bernhard/skripts/current_temperature.sh
+command = sh /home/bernhard/skripts/check_temperature.sh
 color = #ffffff
 [spacer1]
 plugin= text
@@ -50,7 +50,7 @@ text=
 [bitcoin]
 plugin= run
 interval = 600
-command = Rscript /home/bernhard/skripts/bitcoin.r
+command = Rscript /home/bernhard/skripts/check_bitcoin.r
 color = #ffffff
 
 [spacer2]
