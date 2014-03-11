@@ -1,7 +1,7 @@
 [general]
 interval = 1
-loggingLevel = ERROR
-logFile = ~/.i3situation/log.txt
+logging_level = ERROR
+log_file = ~/.config/i3situation/log.txt
 colors = true
 
 [spacer]
@@ -14,12 +14,14 @@ text=|
 plugin= text
 color = #ffffff
 interval = 5000
-text=
+text=
+
 [bat]
 plugin= run
 interval = 60
 command = sh /home/bernhard/skripts/check_battery.sh
 color = #ffffff
+
 [spacer0]
 plugin= text
 color = #ffffff
@@ -30,12 +32,14 @@ text=|
 plugin= text
 color = #ffffff
 interval = 5000
-text=
+text=
+
 [temp]
 plugin= run
 interval = 60
 command = sh /home/bernhard/skripts/check_temperature.sh
 color = #ffffff
+
 [spacer1]
 plugin= text
 color = #ffffff
@@ -46,7 +50,8 @@ text=|
 plugin= text
 color = #ffffff
 interval = 5000
-text=
+text=
+
 [bitcoin]
 plugin= run
 interval = 600
@@ -63,11 +68,12 @@ text=|
 plugin= text
 color = #ffffff
 interval = 5000
-text=
+text=
+
 [spacehome]
 plugin= run
 interval = 60
-command = sh /home/bernhard/skripts/current_freespace.sh home
+command = sh /home/bernhard/skripts/check_freespace.sh home
 color = #ffffff
 
 [spacer3]
@@ -80,11 +86,12 @@ text=|
 plugin= text
 color = #ffffff
 interval = 5000
-text=
+text=
+
 [spaceroot]
 plugin= run
 interval = 60
-command = sh /home/bernhard/skripts/current_freespace.sh root
+command = sh /home/bernhard/skripts/check_freespace.sh root
 color = #ffffff
 
 [spacer4]
@@ -97,23 +104,26 @@ text=|
 plugin= text
 color = #ffffff
 interval = 5000
-text=
+text=
+
 [calendar]
-plugin= dateTime
+plugin= date_time
 interval = 300
 color = #ffffff
-longFormat=%%d/%%m/%%y (%%A)
+long_format=%%d/%%m/%%y (%%A)
 
 [symbolclock]
 plugin= text
 color = #ffffff
 interval = 5000
-text=
+text=
+
 [clock]
-plugin= dateTime
+plugin= date_time
 interval = 60
 color = #ffffff
-longFormat=%%H:%%M
+time_zone=Europe/Vienna
+long_format=%%H:%%M
 
 [spacer5]
 plugin= text
@@ -125,7 +135,7 @@ text=|
 plugin= text
 color = #ffffff
 interval = 5000
-text=
+text=
 
 [gmail]
 plugin=run
