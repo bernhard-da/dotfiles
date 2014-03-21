@@ -1,7 +1,7 @@
 #cat("Rprofile: --> loading devtools-package()\n")
 #library(devtools)
-options(devtools.path="~/development/R-dev")
-.libPaths("~/development/R-dev")
+options(devtools.path="~/daten/development/R-dev")
+.libPaths("~/daten/development/R-dev")
 
 
 devel.on <- function() {
