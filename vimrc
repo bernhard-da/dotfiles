@@ -13,8 +13,7 @@ set nobackup            " get rid of anoying ~file
 
 " Indentation settings for using hard tabs for indent. Display tabs as
 " two characters wide.
-set shiftwidth=2
-set tabstop=2
+set tabstop=2 shiftwidth=2 expandtab
 
 set foldmethod=syntax
 set foldnestmax=5
