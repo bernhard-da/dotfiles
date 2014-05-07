@@ -14,7 +14,8 @@ set nobackup            " get rid of anoying ~file
 " Indentation settings for using hard tabs for indent. Display tabs as
 " two characters wide.
 set tabstop=2 shiftwidth=2 expandtab
-
+set list
+autocmd BufWritePre * :%s/\s\+$//e "automatically remove trailing whitespaces when saving
 set foldmethod=syntax
 set foldnestmax=5
 set foldlevelstart=20
