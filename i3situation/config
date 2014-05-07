@@ -19,7 +19,7 @@ text=
 [bat]
 plugin= run
 interval = 60
-command = sh /home/bernhard/daten/skripts/check_battery.sh
+command = sh /home/bernhard/skripts/i3/check_battery.sh
 color = #ffffff
 
 [spacer0]
@@ -37,7 +37,7 @@ text=
 [temp]
 plugin= run
 interval = 60
-command = sh /home/bernhard/daten/skripts/check_temperature.sh
+command = sh /home/bernhard/skripts/i3/check_temperature.sh
 color = #ffffff
 
 [spacer1]
@@ -55,7 +55,7 @@ text=
 [bitcoin]
 plugin= run
 interval = 600
-command = Rscript /home/bernhard/daten/skripts/check_bitcoin.r
+command = Rscript /home/bernhard/skripts/i3/check_bitcoin.r
 color = #ffffff
 
 [spacer2]
@@ -73,7 +73,7 @@ text=
 [spacehome]
 plugin= run
 interval = 60
-command = sh /home/bernhard/daten/skripts/check_freespace.sh home
+command = sh /home/bernhard/skripts/i3/check_freespace.sh home
 color = #ffffff
 
 [spacer3]
@@ -91,7 +91,7 @@ text=
 [spaceroot]
 plugin= run
 interval = 60
-command = sh /home/bernhard/daten/skripts/check_freespace.sh root
+command = sh /home/bernhard/skripts/i3/check_freespace.sh root
 color = #ffffff
 
 [spacer4]
@@ -140,7 +140,7 @@ text=
 [gmail]
 plugin=run
 interval = 360
-command = sh /home/bernhard/daten/skripts/check_gmail.sh
+command = sh /home/bernhard/skripts/i3/check_gmail.sh
 color = #ffffff
 
 [spacer6]
