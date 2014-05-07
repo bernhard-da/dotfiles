@@ -37,8 +37,11 @@ alias blog='ssh root@beim-entschleunigen.net -p 2105'
 
 alias ll='ls -lah'
 alias vpn='sudo openvpn /home/bernhard/skripts/vpn/bernhard.ovpn'
-alias gem='cd /home/gemeinsam/Dropbox/Auszeit'
 alias rscripts='cd /home/gemeinsam/Dropbox/Auszeit/RScripts'
 alias bc='/home/bernhard/Scripts/bc.r'
 alias gn='sudo systemctl poweroff'
 alias mountenc='encfs /media/nasn/backups_encrypted/home_bernhard_encrypted /media/nasn/backups_encrypted/home_bernhard'
+alias teilen='cd /daten/teilen_ist_schoen'
+alias sim='cd ~/daten/development/gitCheckouts/simpopulation2'
+
+[[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec startx
