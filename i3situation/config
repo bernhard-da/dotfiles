@@ -140,7 +140,7 @@ text=
 [gmail]
 plugin=run
 interval = 360
-command = sh /home/bernhard/skripts/i3/check_gmail.sh
+command = Rscript /home/bernhard/skripts/i3/check_gmail.r
 color = #ffffff
 
 [spacer6]
